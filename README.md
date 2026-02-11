@@ -15,46 +15,36 @@ Optimized Rendering: Uses advanced ANSI sequences (\033[2J\033[3J\033[H) to prev
 🛠️ Tech Stack
 Language: Python
 
-Libraries: opencv-python, numpy, argparse
+Libraries: opencv-python, numpy, argparse, pillow, moviepy,tqdm
 
 Environment: CLI (Compatible with Windows Terminal, VS Code, and Linux/Mac)
 
 🚀 Getting Started
-Prerequisites
-Ensure you have Python installed. You can install the required dependencies using:
+Prerequisites: 
+Ensure you have Python installed. 
+You can install the required dependencies using:
+pip install opencv-python numpy pillow moviepy tqdm
 
-Bash
-Publish with Tiiny Host
-pip install opencv-python numpy
-Installation
+
+Installation:
 Clone the repository to your local machine:
-
-Bash
-Publish with Tiiny Host
 git clone https://github.com/Khushi180475/video-ascii-cli.git
 cd video-ascii-cli
+
 📖 Usage
 Run the tool using the run.py entry point.
 
 Classic Black & White
-Bash
-Publish with Tiiny Host
 python run.py path/to/your_video.mp4
+
 24-bit TrueColor (Recommended)
-Bash
-Publish with Tiiny Host
 python run.py path/to/your_video.mp4 --color
+
 Custom Width and Speed
-Bash
-Publish with Tiiny Host
 python run.py path/to/your_video.mp4 --width 150 --speed 1.5 --color
+
 ⚙️ Project Structure
-run.py: The main entry point handling CLI arguments.
-
-ascii_player.py: Manages the video stream, timing, and terminal rendering.
-
-ascii_convert.py: Contains the core logic for frame resizing and ASCII mapping.
-
-read_frame.py: A helper utility to verify video file integrity.
-
-Developed by Khushi Aggarwal
+├── run.py            # CLI entry point
+├── ascii_player.py   # Video streaming + terminal rendering
+├── ascii_convert.py  # Core ASCII conversion logic
+└── read_frame.py     # Utility for verifying video integrity
