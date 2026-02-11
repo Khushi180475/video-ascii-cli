@@ -3,7 +3,7 @@ import os
 import time
 from ascii_convert import frame_to_ascii
 
-def play_ascii_video(video_path, max_width=120):
+def play_ascii_video(video_path, max_width=120, speed=1.0):
     cap = cv2.VideoCapture(video_path)
 
     if not cap.isOpened():
@@ -28,7 +28,8 @@ def play_ascii_video(video_path, max_width=120):
 
         print(ascii_frame)
 
-        time.sleep(frame_delay)
+        time.sleep(frame_delay / speed)
+
 
     cap.release()
     print("\n🎉 Video finished!")
